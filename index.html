@@ -524,7 +524,7 @@
                 <div class="col-lg-8">
                     <div class="contact-form text-center">
                         <div id="success"></div>
-                        <form   >   
+                        <form id="contactForm" novalidate="novalidate">   
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
                                     <input type="text" class="form-control p-4" id="name" name="name" placeholder="Your Name"
@@ -549,7 +549,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-outline-primary" type="submit"  onclick="sendMail()">Send
+                                <button class="btn btn-outline-primary" type="submit"  onclick="sendMail()" id="sendMessageButton">Send
                                     Message</button>
                             </div>
                         </form>
