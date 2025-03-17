@@ -10,7 +10,8 @@ function sendMail() {
     let sendButton = document.getElementById("sendMessageButton");
     sendButton.disabled = true;
 
-    emailjs.send("service_fe82jar","template_fdvhzim", parms)
+    emailjs.send("service_fe82jar","template_fdvhzim", parms);
+    emailjs.send("service_fe82jar","template_xoq48aa", parms)
         .then(function (response) {
             // Success message
             let successMessage = "<div class='alert alert-success'>";
