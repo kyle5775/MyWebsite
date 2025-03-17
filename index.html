@@ -48,7 +48,7 @@
         </button>
         <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
             <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Homee</a>
+                <a href="#home" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#qualification" class="nav-item nav-link">Quality</a>
                 <a href="#skill" class="nav-item nav-link">Skill</a>
@@ -58,7 +58,7 @@
                 <a href="#awards" class="nav-item nav-link">Awards                </a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+            <buttom onclick="scrollToSection()"class="btn btn-outline-primary d-none d-lg-block">Hire Me</button>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -604,7 +604,14 @@
 
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
-    
+   
+   <script>
+        function scrollToSection() {
+            document.getElementById("contact").scrollIntoView({ 
+                behavior: "smooth"
+            });
+        }
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
