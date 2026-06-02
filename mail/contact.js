@@ -3,7 +3,8 @@ function sendMail() {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value
+        message: document.getElementById("message").value,
+        to_email: "kyleacox11@gmail.com"
     };
 
     // Disable the send button while the request is being processed
