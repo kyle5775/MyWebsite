@@ -1,0 +1,321 @@
+/* ============================================================
+   Modern override theme — loaded after style.css
+   ============================================================ */
+
+:root {
+    --accent: #6366f1;
+    --accent-2: #8b5cf6;
+    --accent-3: #22d3ee;
+    --ink: #1e293b;
+    --ink-soft: #64748b;
+    --surface: #f8fafc;
+    --card: #ffffff;
+    --radius: 18px;
+    --shadow-sm: 0 2px 10px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.10);
+    --shadow-lg: 0 20px 45px rgba(79, 70, 229, 0.18);
+    --gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Nunito', sans-serif;
+    color: var(--ink);
+    background: var(--surface);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .display-1, .display-3, .display-5 {
+    font-family: 'Plus Jakarta Sans', 'Raleway', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+p {
+    color: var(--ink-soft);
+    line-height: 1.75;
+}
+
+/* ---------- Accent color remap ---------- */
+.text-primary {
+    color: var(--accent) !important;
+}
+
+.bg-primary {
+    background: var(--gradient) !important;
+}
+
+.border-primary {
+    border-color: var(--accent) !important;
+}
+
+/* ---------- Navbar: frosted glass ---------- */
+.navbar {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: none !important;
+}
+
+.navbar .navbar-brand h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.navbar .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+    color: var(--ink-soft) !important;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent) !important;
+}
+
+/* ---------- Hero ---------- */
+#home {
+    background: linear-gradient(140deg, #0f172a 0%, #1e1b4b 55%, #312e81 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+#home::before,
+#home::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+#home::before {
+    width: 480px;
+    height: 480px;
+    background: var(--accent-2);
+    top: -140px;
+    right: -100px;
+}
+
+#home::after {
+    width: 380px;
+    height: 380px;
+    background: var(--accent-3);
+    bottom: -160px;
+    left: -120px;
+    opacity: 0.25;
+}
+
+#home .container {
+    position: relative;
+    z-index: 1;
+}
+
+#home h1.display-3 {
+    -webkit-text-stroke: 0 !important;
+    color: #ffffff !important;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+#home h3 {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75) !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+#home .typed-text-output {
+    background: linear-gradient(90deg, #a5b4fc, #67e8f9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+#home img {
+    border: 6px solid rgba(255, 255, 255, 0.12);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ---------- Section headings ---------- */
+.display-1 {
+    -webkit-text-stroke: 1px rgba(99, 102, 241, 0.12) !important;
+    color: transparent !important;
+    font-weight: 800;
+    user-select: none;
+}
+
+.position-absolute.text-uppercase.text-primary {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    border-radius: 999px !important;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.25s ease;
+}
+
+.btn-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+    background: var(--gradient) !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+.btn-outline-primary {
+    color: var(--accent);
+    border-color: rgba(99, 102, 241, 0.45);
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border-radius: 999px !important;
+}
+
+/* ---------- Timeline (education / experience) ---------- */
+#qualification .border-left {
+    border-left: 2px solid rgba(99, 102, 241, 0.25) !important;
+}
+
+#qualification h5 {
+    color: var(--ink);
+}
+
+#qualification .fa-dot-circle {
+    color: var(--accent) !important;
+}
+
+/* ---------- Skills ---------- */
+.progress {
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.10);
+    overflow: hidden;
+}
+
+.progress .progress-bar {
+    background: var(--gradient) !important;
+    border-radius: 999px;
+}
+
+.skill h6 {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+/* ---------- Service / award / certification cards ----------
+   The grid columns themselves become cards: a transparent border
+   preserves the gutter, background-clip keeps the card inset,
+   and drop-shadow hugs the painted card rather than the column. */
+#service .col-lg-4,
+#awards .col-lg-4,
+#certifications .col-lg-4 {
+    background: var(--card);
+    background-clip: padding-box;
+    border: 12px solid transparent;
+    border-radius: calc(var(--radius) + 12px);
+    padding: 2rem 1.5rem;
+    margin-bottom: 0.5rem !important;
+    filter: drop-shadow(0 2px 8px rgba(15, 23, 42, 0.07));
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+#service .col-lg-4:hover,
+#awards .col-lg-4:hover,
+#certifications .col-lg-4:hover {
+    transform: translateY(-6px);
+    filter: drop-shadow(0 14px 24px rgba(15, 23, 42, 0.14));
+}
+
+.service-icon {
+    background: var(--gradient) !important;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+}
+
+/* ---------- Portfolio ---------- */
+#portfolio-flters .btn {
+    border-radius: 999px !important;
+}
+
+.portfolio-item .embed-responsive,
+.portfolio-item img {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-item:hover .embed-responsive,
+.portfolio-item:hover img {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ---------- Testimonials ---------- */
+.testimonial-carousel h4 {
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.testimonial-carousel img {
+    box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Contact form ---------- */
+.contact-form .form-control {
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    border-radius: 12px;
+    background: var(--card);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* ---------- Footer ---------- */
+.container-fluid.bg-primary.text-white.mt-5 {
+    background: linear-gradient(140deg, #0f172a 0%, #1e1b4b 100%) !important;
+}
+
+.btn-social {
+    border-radius: 50% !important;
+    transition: transform 0.2s ease;
+}
+
+.btn-social:hover {
+    transform: translateY(-3px);
+}
+
+/* ---------- Back to top ---------- */
+.back-to-top {
+    border-radius: 50% !important;
+    background: var(--gradient) !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: var(--shadow-md);
+}
